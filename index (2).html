@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>KẾ HOẠCH GYM 6 NGÀY | Hướng dẫn chi tiết + TikTok</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: linear-gradient(145deg, #04070c 0%, #0b111b 100%);
+      font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 12px;
+      min-height: 100vh;
+      color: #dee4ed;
+    }
+
+    .container {
+      max-width: 1050px;
+      width: 100%;
+      background: rgba(10, 14, 22, 0.93);
+      backdrop-filter: blur(18px);
+      border-radius: 42px;
+      padding: 34px 26px 44px;
+      box-shadow: 0 32px 60px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      border: 1px solid #283041;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 6vw, 2.8rem);
+      font-weight: 800;
+      text-align: center;
+      background: linear-gradient(to right, #fb923c, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      display: flex;
+      justify-content: center;
+      gap: 12px 18px;
+      flex-wrap: wrap;
+      color: #b0bacc;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 26px;
+      border-bottom: 1px dashed #364154;
+      padding-bottom: 18px;
+    }
+
+    .subtitle span {
+      background: #1b2332;
+      padding: 6px 16px;
+      border-radius: 30px;
+    }
+
+    .tiktok-note {
+      background: linear-gradient(120deg, #1a1420, #221830);
+      border-left: 6px solid #a855f7;
+      padding: 16px 20px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      color: #e9d5ff;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .tiktok-note strong { color: #c084fc; }
+
+    .day-card {
+      background: #141b28;
+      border-radius: 24px;
+      padding: 22px 20px;
+      margin-bottom: 22px;
+      border: 1px solid #2d384b;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+    }
+
+    .day-card:hover { border-color: #f97316; }
+
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed #2f3a4d;
+    }
+
+    .day-number {
+      background: linear-gradient(135deg, #f97316, #ef4444);
+      color: white;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .day-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fbbf24;
+      letter-spacing: 0.3px;
+    }
+
+    .exercise-item {
+      background: #1b2434;
+      margin-bottom: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #303c50;
+      transition: background 0.2s;
+    }
+
+    .exercise-item:hover {
+      background: #222e42;
+      border-color: #f97316;
+    }
+
+    .ex-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .ex-name {
+      color: #fb923c;
+      font-weight: 700;
+      font-size: 1rem;
+      flex: 1;
+    }
+
+    .ex-sets {
+      color: #60a5fa;
+      font-weight: 700;
+      font-size: 0.85rem;
+      background: #1e3a5f;
+      padding: 3px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .ex-desc {
+      color: #cbd5e1;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+
+    .ex-tiktok {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1f1b2e;
+      color: #c084fc;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #3f2f5c;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .ex-tiktok:hover {
+      background: #2a2440;
+      color: #e9d5ff;
+    }
+
+    .ex-tiktok::before {
+      content: "🎵";
+      font-size: 0.9rem;
+    }
+
+    .rules {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .rule-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #192230;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #2c3850;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .rule-item span { font-size: 1.3rem; }
+
+    .info-card {
+      background: linear-gradient(120deg, #1c1a13, #241f17);
+      border-left: 6px solid #f97316;
+      padding: 18px 22px;
+      border-radius: 18px;
+      margin-bottom: 24px;
+      color: #fcd34d;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+
+    .info-card strong { color: #fb923c; }
+
+    .print-btn {
+      background: #f97316;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 14px 30px;
+      border-radius: 40px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: block;
+      margin: 22px auto 0;
+      letter-spacing: 0.8px;
+      box-shadow: 0 8px 22px rgba(249, 115, 22, 0.4);
+      transition: all 0.2s;
+      border: 1px solid #fb923c;
+    }
+
+    .print-btn:hover {
+      background: #ea580c;
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .container { backdrop-filter: none; background: white; box-shadow: none; border: 1px solid #ccc; color: black; }
+      .day-card { background: #f9f9f9; border: 1px solid #ddd; box-shadow: none; }
+      .exercise-item { background: #f4f4f4; border: 1px solid #ddd; }
+      .print-btn { display: none; }
+      h1 { color: #c2410c; -webkit-text-fill-color: #c2410c; background: none; }
+      .ex-tiktok { background: #f0e9ff; color: #6b21a8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>KẾ HOẠCH GYM 6 NGÀY</h1>
+    <div class="subtitle">
+      <span>💪 Hướng dẫn chi tiết</span>
+      <span>🎵 Từ khóa TikTok</span>
+      <span>🎯 Săn chắc toàn bộ</span>
+    </div>
+
+    <div class="tiktok-note">
+      🎵 <strong>Cách dùng:</strong> Mở TikTok, gõ chính xác cụm từ khóa trong hộp <strong>"🎵"</strong> bên dưới mỗi bài tập. Video sẽ hiện ra ngay, giúp em xem trực quan và tập đúng kỹ thuật từ lần đầu.
+    </div>
+
+    <div class="info-card">
+      ⚡ <strong>Nguyên tắc chung:</strong> Khởi động 5-10 phút trước tập. Nghỉ 60-90 giây giữa hiệp, 2 phút giữa bài. Tăng tạ từ từ mỗi 1-2 tuần khi đã thuần thục kỹ thuật. <strong>Kỹ thuật đúng > tạ nặng.</strong>
+    </div>
+
+    <!-- THỨ 2 -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">THỨ 2</span>
+        <span class="day-title">NGỰC + TAY SAU + BỤNG</span>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">1. Bench Press (Đẩy ngực tạ đòn)</span>
+          <span class="ex-sets">4 × 8-10</span>
+        </div>
+        <div class="ex-desc">Nằm trên ghế, hai chân đặt chắc sàn, mắt nhìn thẳng thanh đòn. Tay nắm rộng hơn vai. Hạ thanh tạ xuống chạm ngực (ngang núm vú), rồi dùng lực ngực + tay đẩy mạnh lên. Giữ vai khóa chặt, không nhún vai.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Bench%20Press%20%C4%91%C3%BAng%20k%E1%BB%B9%20thu%E1%BA%ADt" target="_blank">hướng dẫn Bench Press đúng kỹ thuật</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">2. Incline Dumbbell Press (Đẩy ngực trên)</span>
+          <span class="ex-sets">4 × 10-12</span>
+        </div>
+        <div class="ex-desc">Ghế nghiêng 30-45 độ. Mỗi tay cầm tạ đặt ngang vai. Đẩy tạ thẳng lên, hạ xuống từ từ đến khi căng ngực trên.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Incline%20Dumbbell%20Press" target="_blank">hướng dẫn Incline Dumbbell Press</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">3. Cable Fly (Ép ngực cáp)</span>
+          <span class="ex-sets">4 × 12-15</span>
+        </div>
+        <div class="ex-desc">Đứng giữa 2 bên cáp, chân hơi bước trước. Khuỷu tay hơi cong, dùng lực ngực ép 2 tay vào nhau trước mặt, siết 1 giây rồi mở ra chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Cable%20Fly%20ng%E1%BB%B1c" target="_blank">hướng dẫn Cable Fly ngực</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">4. Dips (Chống xà kép)</span>
+          <span class="ex-sets">3 × 8-12</span>
+        </div>
+        <div class="ex-desc">Hai tay nắm xà song song. Hạ người gập khuỷu đến khi căng ngực dưới. Dùng lực ngực + tay sau đẩy lên. Có thể dùng máy Assisted nếu chưa đủ sức.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Dips%20x%C3%A0%20k%C3%A9p" target="_blank">hướng dẫn Dips xà kép</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">5. Tricep Pushdown (Kéo cáp tay sau)</span>
+          <span class="ex-sets">4 × 12-15</span>
+        </div>
+        <div class="ex-desc">Đứng đối diện máy cáp, khuỷu tay sát thân cố định. Dùng lực tay sau đẩy cáp xuống đến khi tay thẳng, thả về chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Tricep%20Pushdown" target="_blank">hướng dẫn Tricep Pushdown</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">6. Overhead Tricep Extension</span>
+          <span class="ex-sets">3 × 12</span>
+        </div>
+        <div class="ex-desc">Ngồi/đứng, 2 tay cầm 1 tạ đưa qua đầu. Khuỷu tay hướng lên và cố định. Hạ tạ xuống sau đầu, rồi kéo lên bằng tay sau.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Overhead%20Tricep%20Extension" target="_blank">hướng dẫn Overhead Tricep Extension</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">7. Plank (Tấm ván)</span>
+          <span class="ex-sets">3 × giữ đến run</span>
+        </div>
+        <div class="ex-desc">Chống khuỷu tay và mũi chân, giữ cơ thể thẳng từ đầu đến gót. Siết bụng và mông chặt, không võng lưng.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Plank%20%C4%91%C3%BAng%20c%C3%A1ch" target="_blank">hướng dẫn Plank đúng cách</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">8. Cable Crunch (Gập bụng cáp)</span>
+          <span class="ex-sets">3 × 15</span>
+        </div>
+        <div class="ex-desc">Quỳ đối diện máy cáp cao, 2 tay nắm dây thừng để 2 bên đầu. Hông cố định, dùng cơ bụng gập người xuống kéo khuỷu về gối.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Cable%20Crunch" target="_blank">hướng dẫn Cable Crunch</a>
+      </div>
+    </div>
+
+    <!-- THỨ 3 -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">THỨ 3</span>
+        <span class="day-title">LƯNG + TAY TRƯỚC</span>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">1. Lat Pulldown (Kéo xô)</span>
+          <span class="ex-sets">4 × 10-12</span>
+        </div>
+        <div class="ex-desc">Ngồi máy, tay nắm thanh bar rộng hơn vai. Ngực ưỡn, kéo thanh xuống ngang ngực trên, siết cơ lưng. Thả lên chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Lat%20Pulldown" target="_blank">hướng dẫn Lat Pulldown</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">2. Seated Cable Row (Kéo cáp ngồi)</span>
+          <span class="ex-sets">4 × 10-12</span>
+        </div>
+        <div class="ex-desc">Ngồi đối diện máy, chân đặt bệ đỡ. Lưng thẳng, kéo tay cầm về bụng, siết lưng. Duỗi về chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Seated%20Cable%20Row" target="_blank">hướng dẫn Seated Cable Row</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">3. Dumbbell Row (Kéo tạ đơn)</span>
+          <span class="ex-sets">4 × 10-12 mỗi bên</span>
+        </div>
+        <div class="ex-desc">Một tay + đầu gối chống ghế, tay kia cầm tạ. Lưng thẳng, kéo tạ sát hông, siết cơ lưng. Hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Dumbbell%20Row" target="_blank">hướng dẫn Dumbbell Row</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">4. Straight Arm Pulldown</span>
+          <span class="ex-sets">3 × 12-15</span>
+        </div>
+        <div class="ex-desc">Đứng đối diện cáp cao, 2 tay nắm thanh bar, giữ tay thẳng. Kéo thanh xuống theo vòng cung về đùi, siết cơ xô.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Straight%20Arm%20Pulldown" target="_blank">hướng dẫn Straight Arm Pulldown</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">5. Barbell Curl (Cuốn tạ đòn)</span>
+          <span class="ex-sets">4 × 10-12</span>
+        </div>
+        <div class="ex-desc">Đứng thẳng, tay nắm thanh tạ lòng bàn tay hướng lên. Khuỷu tay sát thân, cuốn tạ lên siết bắp tay, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Barbell%20Curl" target="_blank">hướng dẫn Barbell Curl</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">6. Hammer Curl (Cuốn tạ kiểu búa)</span>
+          <span class="ex-sets">3 × 12</span>
+        </div>
+        <div class="ex-desc">Đứng thẳng, 2 tay cầm tạ đơn lòng bàn tay hướng vào thân. Khuỷu cố định, cuốn tạ lên siết bắp tay.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Hammer%20Curl" target="_blank">hướng dẫn Hammer Curl</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">7. Hanging Leg Raise</span>
+          <span class="ex-sets">3 × 12-15</span>
+        </div>
+        <div class="ex-desc">Treo người trên xà, dùng cơ bụng nâng chân thẳng lên song song mặt đất. Hạ xuống chậm, không đung đưa.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Hanging%20Leg%20Raise" target="_blank">hướng dẫn Hanging Leg Raise</a>
+      </div>
+    </div>
+
+    <!-- THỨ 4 -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">THỨ 4</span>
+        <span class="day-title">ĐÙI TRƯỚC + BẮP CHÂN</span>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">1. Barbell Squat (Squat tạ đòn)</span>
+          <span class="ex-sets">4 × 8-10</span>
+        </div>
+        <div class="ex-desc">Đặt thanh tạ lên vai sau (không lên cổ). Lưng thẳng, hạ mông xuống như ngồi ghế cho đến khi đùi song song sàn. Dồn lực gót chân đứng lên.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Barbell%20Squat" target="_blank">hướng dẫn Barbell Squat</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">2. Leg Press (Đạp chân)</span>
+          <span class="ex-sets">4 × 10-12</span>
+        </div>
+        <div class="ex-desc">Ngồi máy, chân đặt bệ đỡ rộng bằng vai. Đạp bệ ra xa, hạ xuống từ từ gập gối về ngực.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Leg%20Press" target="_blank">hướng dẫn Leg Press</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">3. Leg Extension (Duỗi đùi trước)</span>
+          <span class="ex-sets">4 × 12-15</span>
+        </div>
+        <div class="ex-desc">Ngồi máy, chân đặt dưới đệm. Duỗi thẳng chân siết đùi trước, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Leg%20Extension" target="_blank">hướng dẫn Leg Extension</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">4. Walking Lunge (Chùng chân bước tới)</span>
+          <span class="ex-sets">3 × 12 mỗi chân</span>
+        </div>
+        <div class="ex-desc">2 tay cầm tạ đơn. Bước 1 chân tới, hạ người cả 2 gối vuông góc. Đẩy người tới bằng chân trước, bước chân kia lên lặp lại.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Walking%20Lunge" target="_blank">hướng dẫn Walking Lunge</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">5. Calf Raise (Nâng bắp chân)</span>
+          <span class="ex-sets">4 × 15-20</span>
+        </div>
+        <div class="ex-desc">Đứng trên bệ, tay cầm tạ. Nâng gót lên cao hết mức siết bắp chân, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Calf%20Raise" target="_blank">hướng dẫn Calf Raise</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">6. Plank</span>
+          <span class="ex-sets">3 × giữ đến run</span>
+        </div>
+        <div class="ex-desc">Như Thứ 2 – chống khuỷu tay + mũi chân, siết bụng, giữ thẳng.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Plank%20%C4%91%C3%BAng%20c%C3%A1ch" target="_blank">hướng dẫn Plank đúng cách</a>
+      </div>
+    </div>
+
+    <!-- THỨ 5 -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">THỨ 5</span>
+        <span class="day-title">VAI + BỤNG + EO</span>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">1. Overhead Press (Đẩy vai qua đầu)</span>
+          <span class="ex-sets">4 × 8-10</span>
+        </div>
+        <div class="ex-desc">Đứng thẳng, 2 tay cầm tạ ngang vai. Đẩy thẳng tạ lên trên qua đầu đến khi tay gần thẳng, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Overhead%20Press" target="_blank">hướng dẫn Overhead Press</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">2. Lateral Raise (Nâng vai ngang)</span>
+          <span class="ex-sets">4 × 12-15</span>
+        </div>
+        <div class="ex-desc">Đứng thẳng, hơi gập khuỷu, nâng 2 tay ra 2 bên đến ngang vai, siết vai giữa. Hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Lateral%20Raise" target="_blank">hướng dẫn Lateral Raise</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">3. Front Raise (Nâng vai trước)</span>
+          <span class="ex-sets">3 × 12</span>
+        </div>
+        <div class="ex-desc">Đứng thẳng, tay cầm tạ trước đùi. Nâng thẳng tay ra trước đến ngang vai, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Front%20Raise" target="_blank">hướng dẫn Front Raise</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">4. Rear Delt Fly (Nâng vai sau)</span>
+          <span class="ex-sets">4 × 15</span>
+        </div>
+        <div class="ex-desc">Cúi người về trước, 2 tay cầm tạ. Hơi gập khuỷu, nâng 2 tay ra 2 bên + ra sau, siết vai sau.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Rear%20Delt%20Fly" target="_blank">hướng dẫn Rear Delt Fly</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">5. Face Pull (Kéo cáp ngang mặt)</span>
+          <span class="ex-sets">3 × 15</span>
+        </div>
+        <div class="ex-desc">Đứng đối diện cáp cao, 2 tay nắm dây thừng. Kéo dây về phía mặt, tách 2 tay ra 2 bên. Siết vai sau.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Face%20Pull" target="_blank">hướng dẫn Face Pull</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">6. Russian Twist</span>
+          <span class="ex-sets">3 × 20</span>
+        </div>
+        <div class="ex-desc">Ngồi sàn, hơi ngả người sau, chân co. Giữ tạ/bóng, xoay người sang trái rồi sang phải.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Russian%20Twist" target="_blank">hướng dẫn Russian Twist</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">7. Side Plank (Plank nghiêng)</span>
+          <span class="ex-sets">3 × 40 giây mỗi bên</span>
+        </div>
+        <div class="ex-desc">Nằm nghiêng, chống 1 khuỷu tay + cạnh bàn chân. Giữ cơ thể thẳng, siết bụng + eo.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Side%20Plank" target="_blank">hướng dẫn Side Plank</a>
+      </div>
+    </div>
+
+    <!-- THỨ 6 -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">THỨ 6</span>
+        <span class="day-title">MÔNG + ĐÙI SAU</span>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">1. Romanian Deadlift (RDL)</span>
+          <span class="ex-sets">4 × 10-12</span>
+        </div>
+        <div class="ex-desc">Đứng thẳng, tay cầm tạ đòn/tạ đơn trước đùi. Lưng thẳng, đẩy hông ra sau hạ tạ dọc chân đến khi căng đùi sau. Dồn gót đứng lên.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Romanian%20Deadlift" target="_blank">hướng dẫn Romanian Deadlift</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">2. Hip Thrust (Đẩy hông)</span>
+          <span class="ex-sets">4 × 12-15</span>
+        </div>
+        <div class="ex-desc">Tựa lưng ghế, đặt tạ lên hông. Chân đặt sàn rộng bằng hông. Đẩy hông lên cao siết mông, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Hip%20Thrust" target="_blank">hướng dẫn Hip Thrust</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">3. Leg Curl (Cuốn đùi sau)</span>
+          <span class="ex-sets">4 × 12</span>
+        </div>
+        <div class="ex-desc">Nằm sấp máy, chân đặt dưới đệm. Gập gối cuốn gót về mông siết đùi sau, duỗi chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Leg%20Curl" target="_blank">hướng dẫn Leg Curl</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">4. Bulgarian Split Squat</span>
+          <span class="ex-sets">3 × 10 mỗi chân</span>
+        </div>
+        <div class="ex-desc">Đặt 1 chân lên ghế sau, chân kia bước trước. Hạ người cả 2 gối vuông góc, đẩy lên bằng chân trước.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Bulgarian%20Split%20Squat" target="_blank">hướng dẫn Bulgarian Split Squat</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">5. Glute Kickback (Đá mông)</span>
+          <span class="ex-sets">3 × 15 mỗi bên</span>
+        </div>
+        <div class="ex-desc">Quỳ 4 điểm, tay chống sàn. Đá 1 chân ra sau lên cao siết mông, hạ chậm lặp lại.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Glute%20Kickback" target="_blank">hướng dẫn Glute Kickback</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">6. Calf Raise</span>
+          <span class="ex-sets">4 × 15-20</span>
+        </div>
+        <div class="ex-desc">Như Thứ 4 – đứng trên bệ, nâng gót cao siết bắp chân.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Calf%20Raise" target="_blank">hướng dẫn Calf Raise</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">7. Plank</span>
+          <span class="ex-sets">3 × giữ đến run</span>
+        </div>
+        <div class="ex-desc">Như Thứ 2 – chống khuỷu + mũi chân, siết bụng.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Plank%20%C4%91%C3%BAng%20c%C3%A1ch" target="_blank">hướng dẫn Plank đúng cách</a>
+      </div>
+    </div>
+
+    <!-- THỨ 7 -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">THỨ 7</span>
+        <span class="day-title">FULL BODY NHẸ / TAY + VAI</span>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">1. Dumbbell Shoulder Press</span>
+          <span class="ex-sets">3 × 12</span>
+        </div>
+        <div class="ex-desc">Ngồi/đứng, 2 tay cầm tạ đơn ngang vai. Đẩy thẳng tạ lên qua đầu, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Dumbbell%20Shoulder%20Press" target="_blank">hướng dẫn Dumbbell Shoulder Press</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">2. Lateral Raise</span>
+          <span class="ex-sets">3 × 15</span>
+        </div>
+        <div class="ex-desc">Nâng 2 tay ra 2 bên đến ngang vai, siết vai giữa, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Lateral%20Raise" target="_blank">hướng dẫn Lateral Raise</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">3. Cable Curl</span>
+          <span class="ex-sets">3 × 12</span>
+        </div>
+        <div class="ex-desc">Đứng máy cáp thấp, tay nắm thanh. Cuốn cáp lên siết bắp tay, hạ chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Cable%20Curl" target="_blank">hướng dẫn Cable Curl</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">4. Tricep Pushdown</span>
+          <span class="ex-sets">3 × 12</span>
+        </div>
+        <div class="ex-desc">Đẩy cáp xuống tay thẳng siết tay sau, thả chậm.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Tricep%20Pushdown" target="_blank">hướng dẫn Tricep Pushdown</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">5. Goblet Squat</span>
+          <span class="ex-sets">3 × 15</span>
+        </div>
+        <div class="ex-desc">Cầm 1 tạ trước ngực bằng 2 tay. Hạ mông xuống đùi song song sàn, đứng lên siết mông.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Goblet%20Squat" target="_blank">hướng dẫn Goblet Squat</a>
+      </div>
+
+      <div class="exercise-item">
+        <div class="ex-header">
+          <span class="ex-name">6. Plank</span>
+          <span class="ex-sets">3 × giữ đến run</span>
+        </div>
+        <div class="ex-desc">Chống khuỷu + mũi chân, giữ thẳng, siết bụng.</div>
+        <a class="ex-tiktok" href="https://www.tiktok.com/search?q=h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20Plank%20%C4%91%C3%BAng%20c%C3%A1ch" target="_blank">hướng dẫn Plank đúng cách</a>
+      </div>
+    </div>
+
+    <!-- LƯU Ý -->
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-number">💡</span>
+        <span class="day-title">LƯU Ý QUAN TRỌNG</span>
+      </div>
+      <div class="rules">
+        <div class="rule-item"><span>🎯</span> Kỹ thuật đúng > tạ nặng. Bắt đầu nhẹ, tăng dần mỗi 1-2 tuần.</div>
+        <div class="rule-item"><span>🎵</span> Xem TikTok trước khi tập để nắm kỹ thuật, sau đó mới tập thật.</div>
+        <div class="rule-item"><span>😴</span> Ngủ 8 tiếng/đêm. Deload mỗi 4 tuần (giảm 50% khối lượng).</div>
+        <div class="rule-item"><span>💧</span> Uống 4.5-5 lít nước/ngày + bù khoáng khi tập.</div>
+        <div class="rule-item"><span>🩺</span> Đau nhói ở khớp → DỪNG NGAY. Đau cơ (DOMS) là bình thường.</div>
+        <div class="rule-item"><span>📋</span> In ra, dán tường, đánh dấu mỗi buổi tập hoàn thành.</div>
+      </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ In kế hoạch ra dán tường</button>
+    <footer>Săn chắc toàn bộ • Không chảy xệ • Cố lên em! 💪</footer>
+  </div>
+</body>
+</html>
